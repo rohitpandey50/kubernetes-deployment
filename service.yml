@@ -11,7 +11,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
+  - port: 8081
     targetPort: 8081
   selector:
     name: search-city-pod
