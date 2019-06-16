@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: search-city
-        image: rohitpandey50/city-search:0.01-snaphost
+        image: gcr.io/api-project-1072578278872/helloword:v1
         ports:
-        - containerPort: 8081
+        - containerPort: 8080
