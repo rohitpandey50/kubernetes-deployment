@@ -1,0 +1,26 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: searh-city-deployment
+  labels:
+    name: search-city-label
+    app: search-city
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+     name: search-city-pod
+     app: search-city
+  template:
+    metadata:
+      labels:
+        name: search-city-pod
+        app: search-city
+
+    spec:
+      containers:
+      - name: search-city
+        image: rohitpandey50/city-search:0.01-snaphost
+        ports:
+        - containerPort: 80
