@@ -7,7 +7,7 @@ metadata:
     name: search-city-label
     app: search-city
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
      name: search-city-pod
@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: search-city
-        image: gcr.io/api-project-1072578278872/helloword:v1
+        image: gcr.io/api-project-1072578278872/suggest-city:v1
         ports:
         - containerPort: 8080
